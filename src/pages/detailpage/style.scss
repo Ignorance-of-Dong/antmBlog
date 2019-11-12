@@ -47,12 +47,12 @@
                 color: #888;
                 // border-bottom: 1px solid rgb(30, 144, 255);
                 padding: 10px 0;
-
             }
         }
     }
 }
 pre {
+    box-sizing: border-box;
     display: block;
     background-color: #ddd;
     padding: .5rem !important;
@@ -64,16 +64,20 @@ pre {
 
 pre {
     // background-color: #283646 !important;
+    // overflow: hidden;
+    box-sizing: border-box;
 }
 
 pre>code {
+    box-sizing: border-box;
+    width: 99%;
     border: 0px !important;
-    background-color: #283646cc !important;
+    background-color: #171717 !important;
     color: #FFF!important;
-
 }
 
 code {
+    box-sizing: border-box;
     display: inline-block;
     background-color: #f3f3f3;
     border: 1px solid #fdb9cc;

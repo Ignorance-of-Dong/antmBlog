@@ -7,11 +7,13 @@ import 'markdown-navbar/dist/navbar.css';
 // import MarkNav from 'markdown-navbar';
 import './style.scss'
 import Tocify from '../../components/tocify/tocify'
-import { getActiveDetail} from '../../api'
+import { getActiveDetail } from '../../api'
 import marked from 'marked'
 // import hljs from "../../../node_modules/highlight/lib/vendor/highlight.js/highlight";
+import hljs from "highlightjs";
 
-import '../../../node_modules/highlight/lib/vendor/highlight.js/styles/github.css';
+// import 'highlightjs/styles/github.css';
+import 'highlightjs/styles/monokai-sublime.css';
 
 function VideoPage(props: any) {
     console.log(props)
@@ -60,9 +62,9 @@ function VideoPage(props: any) {
         breaks: false,
         smartLists: true,
         smartypants: false,
-        // highlight: function (code) {
-        //     return hljs.highlightAuto(code).value;
-        // }
+        highlight: function (code) {
+            return hljs.highlightAuto(code).value;
+        }
     });
 
 

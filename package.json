@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/highlightjs": "^9.12.0",
     "@types/jest": "24.0.22",
     "@types/lodash": "^4.14.145",
     "@types/marked": "^0.7.0",
@@ -14,6 +15,7 @@
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
     "highlight": "^0.2.4",
+    "highlightjs": "^9.16.2",
     "lodash": "^4.17.15",
     "markdown-navbar": "^1.0.7",
     "marked": "^0.7.0",

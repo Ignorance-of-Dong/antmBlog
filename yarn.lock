@@ -1290,6 +1290,18 @@
   resolved "https://registry.npm.taobao.org/@types/eslint-visitor-keys/download/@types/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha1-HuMNeVRMqE1o1LPNsK9PIFZj3S0=
 
+"@types/highlight.js@*":
+  version "9.12.3"
+  resolved "https://registry.npm.taobao.org/@types/highlight.js/download/@types/highlight.js-9.12.3.tgz#b672cfaac25cbbc634a0fd92c515f66faa18dbca"
+  integrity sha1-tnLPqsJcu8Y0oP2SxRX2b6oY28o=
+
+"@types/highlightjs@^9.12.0":
+  version "9.12.0"
+  resolved "https://registry.npm.taobao.org/@types/highlightjs/download/@types/highlightjs-9.12.0.tgz#2d41f689f63b3746e882dc795cbebe07ab6eaf27"
+  integrity sha1-LUH2ifY7N0bogtx5XL6+B6turyc=
+  dependencies:
+    "@types/highlight.js" "*"
+
 "@types/history@*":
   version "4.7.3"
   resolved "https://registry.npm.taobao.org/@types/history/download/@types/history-4.7.3.tgz#856c99cdc1551d22c22b18b5402719affec9839a"
@@ -4994,6 +5006,11 @@ highlight@^0.2.4:
   version "0.2.4"
   resolved "https://registry.npm.taobao.org/highlight/download/highlight-0.2.4.tgz#8ac02875b03f5935e0675852b76cfe1fd58e0dff"
   integrity sha1-isAodbA/WTXgZ1hSt2z+H9WODf8=
+
+highlightjs@^9.16.2:
+  version "9.16.2"
+  resolved "https://registry.npm.taobao.org/highlightjs/download/highlightjs-9.16.2.tgz#07ea6cc7c93340fc440734fb7abf28558f1f0fe1"
+  integrity sha1-B+psx8kzQPxEBzT7er8oVY8fD+E=
 
 history@^4.9.0:
   version "4.10.1"

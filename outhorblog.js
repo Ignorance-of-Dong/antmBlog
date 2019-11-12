@@ -12,7 +12,7 @@ var cp = require('child_process');
 //创建服务
 var httpServer = http.createServer(processRequest);
 
-var port = 3001;
+var port = 3008;
 
 //指定一个监听的接口
 httpServer.listen(port, function() {

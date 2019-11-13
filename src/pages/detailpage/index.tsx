@@ -2,17 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/header'
 import QueueAnim from 'rc-queue-anim';
 import { Icon, Affix} from 'antd'
-// import ReactMarkdown from 'react-markdown'
 import 'markdown-navbar/dist/navbar.css';
-// import MarkNav from 'markdown-navbar';
 import './style.scss'
 import Tocify from '../../components/tocify/tocify'
 import { getActiveDetail } from '../../api'
 import marked from 'marked'
-// import hljs from "../../../node_modules/highlight/lib/vendor/highlight.js/highlight";
 import hljs from "highlightjs";
-
-// import 'highlightjs/styles/github.css';
 import 'highlightjs/styles/monokai-sublime.css';
 
 function VideoPage(props: any) {
@@ -50,7 +45,7 @@ function VideoPage(props: any) {
     const renderer = new marked.Renderer();
     renderer.heading = function (text, level, raw) {
         const anchor = tocify.add(text, level);
-        return `<a id="${anchor}" href="#${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`;
+        return `<a id="${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`;
     };
 
     marked.setOptions({
@@ -97,7 +92,7 @@ function VideoPage(props: any) {
             </div>
             <div className="container-right-d">
                 <div className="ding">
-                    <Affix offsetTop={200}>
+                    <Affix offsetTop={25}>
                         <div className="detailed-nav comm-box">
                             <div className="nav-title">文章目录</div>
                             <div className="toc-list">

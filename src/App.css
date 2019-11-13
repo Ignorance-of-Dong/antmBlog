@@ -27,12 +27,16 @@
 html {
   overflow-y: scroll;
 }
-html,body,#root{
+html{
   width: 100%;
   height: 100%;
 }
+body {
+  width: 100%!important;
+}
 .wraper {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* background: #dddddd; */
+  background: #ddd;
 }

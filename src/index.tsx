@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ModileiPonePage from './components/modileiPone'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let html
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    html = <ModileiPonePage />
+} else {
+    html = <App />
+}
+ReactDOM.render(html, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

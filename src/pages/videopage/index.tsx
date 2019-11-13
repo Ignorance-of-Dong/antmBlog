@@ -8,6 +8,7 @@ import Addnotelife from '../../components/addnotelife'
 import Tocify from '../../components/tocify/tocify'
 import marked from 'marked'
 import { getArticlesCollection } from '../../api'
+import ReactCanvasNest from 'react-canvas-nest';
 // let markdown = '<iframe src="//player.bilibili.com/player.html?aid=74832429&cid=128006810&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>'
 function VideoPage(props:any) {
     const tocify = new Tocify()
@@ -64,7 +65,12 @@ function VideoPage(props:any) {
                 </QueueAnim>
             </div>
             <div className="container-right-v">
-                <Author />
+                <div className="linssse-canvas">
+                    <ReactCanvasNest className='canvasNest' config={{ pointColor: ' 255, 255, 255 ' }} style={{ zIndex: 1 }} count={40}/>
+                </div>
+                <div className="linssse-content">
+                    <Author />
+                </div>
             </div>
         </div>
         <Addnotelife page='videopage' Submission={change}/>

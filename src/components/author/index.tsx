@@ -80,6 +80,7 @@ function Author(props: any) {
     }
     return <>
         <div className="author-div comm-box">
+            
             <div> <Avatar size={100} src="http://my.ignorantscholar.cn/images/headers.png" /></div>
             <div className="author-introduction">
                 <Texty enter={getEnter} leave={getEnter}>稻草程序员，专注于WEB和移动前端开发。。此地维权无门，此时无能为力，此心随波逐流。</Texty>

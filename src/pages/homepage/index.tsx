@@ -6,6 +6,7 @@ import { Skeleton } from 'antd';
 import Addnotelife from '../../components/addnotelife'
 import { getActivelist } from '../../api'
 import './style.scss'
+import ReactCanvasNest from 'react-canvas-nest';
 function HomePage(props:any){
     let [activeList, setActiveList] = useState([])
     let [initData, setinitData] = useState(true)
@@ -17,6 +18,7 @@ function HomePage(props:any){
     const change = () => {
         setinitData(!initData)
     }
+    let bacolor = ['red', 'green']
     return <div className='wrap-h'>
         <QueueAnim delay={1000} className="queue-simple">
             <Header selectIndex={0}{...props}/>
@@ -30,6 +32,7 @@ function HomePage(props:any){
                             return <div key={res.id} className="c-l-tip" onClick={() => {
                                 props.history.push(`/detailpage?activeid=${res.activeid}`)
                             }}>
+                                <div className="prominent" style={{ background: bacolor[Math.floor(Math.random() * 2)]}}></div>
                                 <div className="header">
                                     {res.title}
                                 </div>
@@ -47,7 +50,12 @@ function HomePage(props:any){
                 </QueueAnim>
             </div>
             <div className="container-right-h">
-                <Author/>
+                <div className="linssse-canvas">
+                    <ReactCanvasNest className='canvasNest' config={{ pointColor: ' 255, 255, 255 ' }} style={{ zIndex: 1 }} count={40}/>
+                </div>
+                <div className="linssse-content">
+                    <Author />
+                </div>
             </div>
         </div>
         <Addnotelife page='homepage' Submission={change}/>

@@ -21,12 +21,27 @@
             .c-l-tip {
                 width: 100%;
                 // height: 250px;
-                background: #ddd;
+                // background: #ddd;
+                background: #fff;
                 margin-top: 20px;
                 border-radius: 10px;
                 padding: 20px;
                 box-shadow: 3px 3px 5px #ccc;
+                position: relative;
                 cursor: pointer;
+                &:hover{
+                    background: #f7f4f4;
+                }
+                .prominent {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 5px;
+                    height: 100px;
+                    width: 3px;
+                    background: red;
+                    box-shadow: 2px 1px 3px #ccc;
+                }
 
                 .header {
                     font-size: 25px;
@@ -62,6 +77,21 @@
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 1px 1px 5px #ccc;
+            position: relative;
+            overflow: hidden;
+            .linssse-canvas {
+                width: 100%;
+                height: 1000px;
+                position: absolute;
+                top: 0;
+            }
+            .linssse-content {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 22;
+            }
         }
     }
 }

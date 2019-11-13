@@ -9420,6 +9420,11 @@ react-app-rewired@^2.1.4:
   dependencies:
     semver "^5.6.0"
 
+react-canvas-nest@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.npm.taobao.org/react-canvas-nest/download/react-canvas-nest-1.0.10.tgz#df111637e6d4eae1fe5f1c1788bf6d364bd06d0b"
+  integrity sha1-3xEWN+bU6uH+XxwXiL9tNkvQbQs=
+
 react-dev-utils@^9.1.0:
   version "9.1.0"
   resolved "https://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-9.1.0.tgz#3ad2bb8848a32319d760d0a84c56c14bdaae5e81"

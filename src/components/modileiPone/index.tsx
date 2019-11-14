@@ -8,11 +8,11 @@ function ModileiPonePage() {
         <div className="modile-link" onClick={() => {
             // window.open('../../assect/apk/app.apk')
         }}>
-            <a href="../../assect/apk/app.apk" download> 下载 </a>
+            <a href="https://github.com/Ignorance-of-Dong/antmBlog/raw/master/src/assect/apk/app.apk" download> 下载 </a>
         </div>
 
         <div className="modile-down">
-            https://www.cnblogs.com/ldlx-mars/p/7666854.html
+            文件下载由Git提供！！！！下载可能有些慢，请耐心等待<span role="img" aria-label='生气'>😈😈😈😈生气</span>
         </div>
     </div>
 }

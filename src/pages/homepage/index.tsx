@@ -51,7 +51,7 @@ function HomePage(props:any){
             </div>
             <div className="container-right-h">
                 <div className="linssse-canvas">
-                    <ReactCanvasNest className='canvasNest' config={{ pointColor: ' 255, 255, 255 ' }} style={{ zIndex: 1 }} count={40}/>
+                    <ReactCanvasNest className='canvasNest' config={{ pointColor: ' 255, 255, 255 ' }} style={{ zIndex: 1 }} count={40} follow={true}/>
                 </div>
                 <div className="linssse-content">
                     <Author />

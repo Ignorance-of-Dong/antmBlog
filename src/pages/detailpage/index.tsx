@@ -53,7 +53,7 @@ function VideoPage(props: any) {
         gfm: true,
         pedantic: false,
         sanitize: false,
-        tables: true,
+        // tables: true,
         breaks: false,
         smartLists: true,
         smartypants: false,

@@ -16,7 +16,7 @@
     "customize-cra": "^0.8.0",
     "highlight": "^0.2.4",
     "highlightjs": "^9.16.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "markdown-navbar": "^1.0.7",
     "marked": "^0.7.0",
     "node-sass": "^4.13.0",

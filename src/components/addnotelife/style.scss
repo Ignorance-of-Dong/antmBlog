@@ -1,20 +1,36 @@
-.corner-dom{
-    position: fixed;
-    bottom:30px;
-    right: 50px;
-    z-index: 99999;
+.corner-dom {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  div {
     width: 50px;
     height: 50px;
-    // background: lightseagreen;
-    cursor: pointer;
-    div {
-        width: 50px;
-        height: 50px;
-        // background: lightcoral;
-        border-radius: 10px;
-    }
+    border-radius: 10px;
+  }
 }
-.corner-line{
-    width: 100%;
-    height: 5px;
+.corner-line {
+  width: 100%;
+  height: 10px;
+}
+.add-active {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 50px;
+  color: rgb(0, 136, 204);
+  svg {
+    font-size: 50px;
+  }
+}
+.MuiInputBase-input {
+  width: 500px !important;
+  //   height: 10px !important;
 }

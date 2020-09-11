@@ -1,108 +1,119 @@
-import React from 'react'
-import './style.scss'
-import Texty from 'rc-texty';
+import React from "react";
+import "./style.scss";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Input from '@material-ui/core/Input';
+import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
+
 function Header(props: any) {
-    const getEnter = (e: any) => {
-        switch (e.index) {
-            case 0:
-                return {
-                    rotate: 90,
-                    opacity: 0,
-                    y: -60,
-                };
-            case 10:
-            case 1:
-                return {
-                    y: -60,
-                    x: -10,
-                    opacity: 0,
-                };
-            case 9:
-            case 2:
-                return {
-                    y: -60,
-                    x: 20,
-                    opacity: 0,
-                };
-            case 3:
-                return {
-                    y: 60,
-                    opacity: 0,
-                };
-            case 8:
-            case 4:
-                return {
-                    x: 30,
-                    opacity: 0,
-                };
-            case 5:
-                return {
-                    enter: [
-                        {
-                            scale: 2,
-                            opacity: 0,
-                            type: 'set',
-                        },
-                        { scale: 1.2, opacity: 1, duration: 300 },
-                        { scale: 0.9, duration: 200 },
-                        { scale: 1.05, duration: 150 },
-                        { scale: 1, duration: 100 },
-                    ],
-                    leave: {
-                        opacity: 0, scale: 0,
-                    },
-                };
-            case 6:
-                return {
-                    scale: 0.8,
-                    x: 30,
-                    y: -10,
-                    opacity: 0,
-                };
-            case 7:
-                return {
-                    scale: 0.8,
-                    x: 30,
-                    y: 10,
-                    opacity: 0,
-                };
-            default:
-                return {
-                    opacity: 0,
-                };
-        }
+  let { selectIndex = 0, handelSearch } = props;
+  const [open, setOpen] = React.useState(false);
+  const [searchInput, setSearchInput] = React.useState("");
+
+
+  const toggleDrawer = (anchor: String, open: boolean) => (
+    event: React.KeyboardEvent | React.MouseEvent
+  ) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      ((event as React.KeyboardEvent).key === "Tab" ||
+        (event as React.KeyboardEvent).key === "Shift")
+    ) {
+      return;
     }
-    let {selectIndex = 0} = props
-    return <>
-        <div className="blog-header">
-            <div className="blog-text">
-                <div className="blog-left">
-                    <Texty>倥侗无知</Texty>
-                </div>
-                <div className="blog-other">
-                    <Texty>Ant Motion..........</Texty>
-                </div>
-            </div>
-            <div className="blog-tab">
-                <div className="tab" onClick={() => {
-                    props.history.push('/')
-                }}>
-                    <Texty enter={getEnter} leave={getEnter}>{'Home Page'}</Texty>
-                    <div className="line" style={{ display: selectIndex === 0 ? 'block' : 'none'}}></div>
-                </div>
-                <div className="tab">
-                    <Texty enter={getEnter} leave={getEnter}>{'Article'}</Texty>
-                    <div className="line" style={{ display: selectIndex === 1? 'block' : 'none' }}></div>
-                </div>
-                <div className="tab" onClick={() => {
-                    props.history.push('/videopage')
-                }}>
-                    <Texty enter={getEnter} leave={getEnter}>{'Video life'}</Texty>
-                    <div className="line" style={{ display: selectIndex === 2 ? 'block' : 'none' }}></div>
-                </div>
-            </div>
+
+    setOpen(false);
+  };
+  
+  const handelSearchs = () => {
+    handelSearch(searchInput)
+  }
+
+  return (
+    <>
+      <div className="blog-header">
+        <div className="blog-text">
+          <div className="blog-left">倥侗无知</div>
+          <div className="blog-other">作为一个怪兽，我的欲望是至少消灭一个奥特曼<span role="img" aria-label="淘气">🥳🥳🥳</span></div>
         </div>
+        <div className="specd"></div>
+        <div className="search">
+          <Input placeholder="查询您的文章" onChange={(e) => {
+            setSearchInput(e.target.value)
+          }}/>
+          <IconButton aria-label="search" onClick={() => { handelSearchs() }}>
+            <SearchIcon />
+          </IconButton>
+        </div>
+        <div className="blog-tab">
+          <div
+            className="tab"
+            onClick={() => {
+              props.history.push("/");
+            }}
+          >
+            Home Page
+            <div
+              className="line"
+              style={{ display: selectIndex === 0 ? "block" : "none" }}
+            ></div>
+          </div>
+          <div className="tab">
+            Article
+            <div
+              className="line"
+              style={{ display: selectIndex === 1 ? "block" : "none" }}
+            ></div>
+          </div>
+          <div
+            className="tab"
+            onClick={() => {
+              props.history.push("/videopage");
+            }}
+          >
+            Video life
+            <div
+              className="line"
+              style={{ display: selectIndex === 2 ? "block" : "none" }}
+            ></div>
+          </div>
+          <div
+            className="tab more"
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            More Operations
+            <div
+              className="line"
+              style={{ display: selectIndex === 3 ? "block" : "none" }}
+            ></div>
+          </div>
+        </div>
+      </div>
+      <SwipeableDrawer
+        anchor="right"
+        open={open}
+        onClose={toggleDrawer("right", false)}
+        onOpen={toggleDrawer("right", true)}
+      >
+        <div className="drawer-wrap">
+          <List>
+            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+              <ListItem button key={text}>
+                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </div>
+      </SwipeableDrawer>
     </>
+  );
 }
 
-export default Header
+export default Header;

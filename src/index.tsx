@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import ModileiPonePage from './components/modileiPone'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import ModileiPonePage from "./components/modileiPone";
 
-let html
+let html;
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    html = <ModileiPonePage />
+  html = <ModileiPonePage />;
 } else {
-    html = <App />
+  html = <App />;
 }
-ReactDOM.render(html, document.getElementById('root'));
+ReactDOM.render(html, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

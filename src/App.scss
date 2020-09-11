@@ -20,24 +20,29 @@
 .App-link {
   color: #09d3ac;
 }
-
-*{
+* {
   box-sizing: border-box;
-  font-family: 'KaiTi';
 }
+
 html {
-  overflow-y: scroll;
-}
-html{
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 }
 body {
-  width: 100%!important;
+  width: 100% !important;
+  background-color: #fbfbfb !important;
 }
 .wraper {
   width: 100%;
-  /* height: 100%; */
-  /* background: #dddddd; */
-  background: #ddd;
+  background: #fbfbfb;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  // background: #ccc;
+  position: relative;
+  bottom: 0;
+  text-align: center;
 }

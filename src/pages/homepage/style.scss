@@ -1,98 +1,93 @@
-.wrap-h {
-    width: 100%;
+.home-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .active-list {
+    width: 75%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .container {
-        padding-top: 70px;
-        width: 90%;
-        height: 100%;
-        // background: #ccc;
+    .pagination {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin-top: 20px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 4px 3px 5px 2px #ccc;
+      .page {
+        width: 40%;
         margin: 0 auto;
+      }
+      .MuiPagination-root {
         display: flex;
-        justify-content: space-between;
-
-        .container-left {
-            width: 75%;
-            height: 100%;
-
-            // background: gray;
-            .c-l-tip {
-                width: 100%;
-                // height: 250px;
-                // background: #ddd;
-                background: #fff;
-                margin-top: 20px;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 3px 3px 5px #ccc;
-                position: relative;
-                cursor: pointer;
-                &:hover{
-                    background: #f7f4f4;
-                }
-                .prominent {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    left: 5px;
-                    height: 100px;
-                    width: 3px;
-                    background: red;
-                    box-shadow: 2px 1px 3px #ccc;
-                }
-
-                .header {
-                    font-size: 25px;
-                    // font-weight: 800;
-                }
-
-                .introduce {
-                    padding-top: 10px;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    span {
-                        font-size: 14px;
-                        padding-right: 10px;
-                    }
-                }
-
-                .content {
-                    padding-top: 20px;
-                    text-indent: 2em;
-                    color: #555;
-                    line-height: 25px;
-                }
-            }
-        }
-
-        .container-right-h {
-            width: 24%;
-            background: #fff;
-            border: 2px solid #ccc;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 1px 1px 5px #ccc;
-            position: relative;
-            overflow: hidden;
-            .linssse-canvas {
-                width: 100%;
-                height: 1000px;
-                position: absolute;
-                top: 0;
-                z-index: 66;
-            }
-            .linssse-content {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                z-index: 22;
-            }
-        }
+        justify-content: space-around;
+      }
     }
+    .active-item {
+      width: 100%;
+      background: #fff;
+      margin-top: 20px;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 3px 3px 5px #ccc;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        background: #f7f4f4;
+      }
+      .operation {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+      }
+      .tip-tags {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        height: 100px;
+        width: 3px;
+        background: red;
+        box-shadow: 2px 1px 3px #ccc;
+      }
+      .active-header {
+        font-size: 25px;
+      }
+      .active-introduce {
+        padding-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span {
+          font-size: 14px;
+          padding-right: 10px;
+        }
+      }
+      .active-content {
+        padding-top: 20px;
+        text-indent: 2em;
+        color: #555;
+        line-height: 25px;
+      }
+    }
+  }
+  .container-info {
+    width: 24%;
+    background: #fff;
+    border: 2px solid #ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #ccc;
+    position: relative;
+    overflow: hidden;
+    .info-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 22;
+    }
+  }
 }

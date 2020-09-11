@@ -1,12 +1,12 @@
 import React, { Suspense } from "react"
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-
+import LinearProgress from '@material-ui/core/LinearProgress';
 function RouterMap(props: any) {
     const { route } = props;
     const defaultRouter = <Route path="/" component={() => {
         return <Redirect to="/homepage" key={22} />
     }} key={22} exact/>
-    return <Router><Suspense fallback={<div></div>}><Switch>
+    return <Router><Suspense fallback={<div> <LinearProgress /><LinearProgress color="secondary" /></div>}><Switch>
         {
             route.map((item: any, index: number) => {
                 const Comp = item.component

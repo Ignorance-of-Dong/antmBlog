@@ -1,67 +1,77 @@
-.author-div {
-    text-align: center;
-    padding: 1rem;
-    .canvasNest {
-        width: 100%;
-        height: 100%;
+.author {
+  text-align: center;
+  padding: 20px;
+  .avator-pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    div {
+      width: 110px;
+      height: 110px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 1px 1px 14px 4px #ccc;
+      &:hover {
+        box-shadow: 1px 1px 14px 8px #ccc;
+      }
     }
-
+  }
+}
+.drawer-wrap {
+  width: 270px;
 }
 
 .author-div div {
-    margin-bottom: 1rem;
-
+  margin-bottom: 1rem;
 }
 
 .author-introduction {
-    font-size: .8rem;
-    color: #999;
+  font-size: 0.8rem;
+  color: #999;
 }
 
 .account {
-    background-color: #999;
-    margin-left: .5rem;
-    margin-right: .5rem;
+  background-color: #999;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .banner-user {
-    height: 140px;
-    border-radius: 5px;
+  height: 140px;
+  border-radius: 5px;
 }
 
 .banner-user-elem {
-    text-align: center;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .banner-user-elem .banner-user-title {
-    font-size: 32px;
-    top: 20%;
+  font-size: 32px;
+  top: 20%;
 }
 
 .banner-user-elem .banner-user-text {
-    top: 20%;
+  top: 20%;
 }
 
 .banner-anim-elem .bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
-.prev { 
-    display: none;
+.prev {
+  display: none;
 }
 .next {
-    display: none;  
+  display: none;
 }
 .auto {
-    margin: 20px auto;
-    text-align: center;
-    font-family:"Times New Roman",
-    Georgia,
-    Serif;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
 }

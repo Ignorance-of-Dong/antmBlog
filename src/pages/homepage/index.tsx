@@ -51,15 +51,15 @@ function HomePage(props: any) {
 
   let bacolor = ["red", "green", "yellow"];
   
-  const deleteActive = async (e: any, id: number) => {
+  const deleteActive = async (e: any, activeid: number) => {
     e.stopPropagation()
     setConfirmDialog(true);
-    setId(id)
+    setId(activeid)
   }
 
   const handelDelete = async (): Promise<any> => {
     await deleteArticles({
-      id: id
+      activeid: id
     })
     setConfirmDialog(false)
     message.success("删除成功！！！！");
@@ -98,7 +98,7 @@ function HomePage(props: any) {
 													</div>
 													<div className="active-content">{res.introduction}</div>
                           <div className="operation">
-                            <Button color="secondary" onClick={(e) => { deleteActive(e, res.id) }}>DELETE ACTIVE</Button>
+                            <Button color="secondary" onClick={(e) => { deleteActive(e, res.activeid) }}>DELETE ACTIVE</Button>
                           </div>
 												</div>
 											</Paper>

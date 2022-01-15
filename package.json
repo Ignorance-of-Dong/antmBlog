@@ -20,7 +20,7 @@
     "highlightjs": "^9.16.2",
     "lodash": "^4.17.15",
     "markdown-navbar": "^1.0.7",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "node-sass": "^4.13.0",
     "notistack": "^1.0.0",
     "react": "^16.11.0",
